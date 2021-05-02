@@ -128,7 +128,7 @@
     box-shadow: none; /* remove box shadow */
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 460px) {
 
     .contain-carousel {
         margin-top: 24vh;
@@ -158,7 +158,7 @@
     }
 }
 
-@media only screen and (max-width: 980) {
+@media only screen and (max-width: 980) and (max-height: 340) {
 
     .contain-carousel {
         margin-top: 18vh;
