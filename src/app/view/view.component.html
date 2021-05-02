@@ -1,0 +1,63 @@
+<nav class="navbar fixed-top" style="background-color: lavender">
+  <div class="container-fluid nav-container">
+    <div class="nav">
+      &nbsp;
+      <div class="nav-item">
+        <img src="../assets/images/dog.png" alt="dog" width="40" height="38" />
+      </div>
+      &nbsp; &nbsp;
+      <div class="nav-item">
+        <div class="form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+            (change)="onChange()"
+          />
+        </div>
+      </div>
+      &nbsp; &nbsp;
+      <div class="nav-item">
+        <img src="../assets/images/cat.png" alt="cat" width="40" height="43" />
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="btn btn-poem" (click)="like()">
+        <img
+          src="../../assets/images/slideshow.png"
+          alt="coder"
+          width="30"
+          height="30"
+        />
+      </div>
+    </div>
+  </div>
+</nav>
+<br />
+<br />
+
+<div class="container-fluid carousel-container" *ngIf="liked; else main">
+  <div class="container-fluid contain-carousel">   
+    <div class="col-12">  
+        <ngb-carousel class="ngb-carousel-class">  
+            <ng-template ngbSlide *ngFor="let url of imgUrls">  
+                <img class="carousel-img" src="{{ url }}" alt="Poem">  
+            </ng-template>
+        </ngb-carousel>  
+    </div>  
+  </div>  
+</div>
+
+<ng-template #main>
+  <div class="row gallery">
+    <div class="col-lg-3 col-md-4 col-sm-6 thumb" *ngFor="let url of imgUrls">
+      <img class="img-fluid img-thumbnail" src="{{ url }}" alt="Cute Image" />
+    </div>
+  </div>
+  <div class="scroll-to-top" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+    <div class="btn btn-light btn-lg back-to-top" (click)="scrollToTop()">
+      <p class="fas fa-angle-double-up"></p>
+    </div>
+  </div>
+</ng-template>
+

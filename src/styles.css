@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    overflow-x: hidden;
+    padding-left: 1rem;
+    padding-right: 0.75rem;
+    background-color: rgb(230,230,250) !important;
+}

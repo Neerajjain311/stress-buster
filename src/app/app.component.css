@@ -1,0 +1,13 @@
+body {
+    background-color: transparent;
+}
+
+.form-switch .form-check-input {
+    width: 3.3em;
+    height: 1.3em;
+    margin-top: 0.7em;
+}
+
+.thumb {
+    margin-top: 1rem;
+}
